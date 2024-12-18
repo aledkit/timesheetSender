@@ -1,7 +1,7 @@
 # timesheetSender
-
-## Simple python script to make sending timesheets easier
-
+  
+Simple python script to make sending timesheets easier  
+  
 On run opens GUI to input hours into a table  
 User input is formatted into a HTML table and sent to email recipient  
   
