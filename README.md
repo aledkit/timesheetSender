@@ -11,4 +11,4 @@ secrets.json must be updated to function properly
   - recipient_email - email sent to when DEBUG = False  
   - test_email - emailsent to when DEBUG = True
 
-DEBUG is true by default
+DEBUG is false by default
