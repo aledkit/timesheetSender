@@ -9,6 +9,7 @@ from email.mime.text import MIMEText
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 465
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+DEBUG = True
 
 def generate_hours():
     """
@@ -124,12 +125,16 @@ def main():
     sender_email = secrets['sender_email']
     password = secrets['sender_password']
     receiver_email = secrets['recipient_email']
+    test_email = secrets['test_email']
 
     context = ssl.create_default_context()
 
     message = MIMEMultipart()
     message['From'] = sender_email
-    message['To'] = receiver_email
+    if DEBUG:
+        message['To'] = test_email
+    else:
+        message['To'] = receiver_email
     message['Subject'] = 'Weekly Timesheet'
 
     body = generate_body()
