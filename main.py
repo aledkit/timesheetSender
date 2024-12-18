@@ -101,7 +101,7 @@ def generate_body():
                     {"".join(f"<td>{hour}</td>" for hour in hours_row_2)}
                 </tr>
             </table>
-            <p><strong>Total RG Hours:</strong> {total_hours}</p>
+            <p><strong>Total Hours:</strong> {total_hours}</p>
         </body>
     </html>
     """
